@@ -1,229 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="Utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <title>Bariso Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-        <meta charset="Utf-8">
-        <meta http-equiv="X-UA-Compatible" content ="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale-1.0">
-        <title>Bariso Portfolio</title>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="style.css">
-        
-</head>
+  <body>
+    <header class="active">
+      <a href="#" class="logo"><i>Dominic</i></a>
 
-<body>
-    
-        <header class="active">
-            <a href= "#" class="logo"><i>Dominic</i></a>
+      <i class="bx bx-menu" id="menu-icon"></i>
 
-            <i class='bx bx-menu' id="menu-icon"></i>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Resume</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
 
-            <nav>
-                    <a href="#" class="active">Home</a>
-                    <a href="#">Services</a>      
-                    <a href="#">Resume</a>
-                    <a href="#">Contact</a>
-            </nav>
-        </header>
+    <div class="bars-box active">
+      <div class="bar" style="--i: 5"></div>
+      <div class="bar" style="--i: 4"></div>
+      <div class="bar" style="--i: 3"></div>
+      <div class="bar" style="--i: 2"></div>
+      <div class="bar" style="--i: 1"></div>
+    </div>
 
-        <div class="bars-box active">
-                
-                <div class="bar" style="--i:5;"></div>
-                <div class="bar" style="--i:4;"></div>
-                <div class="bar" style="--i:3;"></div>
-                <div class="bar" style="--i:2;"></div>
-                <div class="bar" style="--i:1;"></div>
+    <section class="Home active">
+      <div class="home-detail">
+        <h1>Ed Dominic Bariso</h1>
+        <h2>
+          I am a
+          <span style="--i: 4" data-text="Coder">Coder</span>
+          <span style="--i: 3" data-text="Web Developer">Web Developer</span>
+          <span style="--i: 2" data-text="Frontend Developer"
+            >Frontend Developer</span
+          >
+        </h2>
+        <p>
+          I am a Computer Science graduate pursuing a career in web development.
+          I have a solid foundation in programming and a growing passion for
+          creating responsive, user-friendly websites and applications. I enjoy
+          turning ideas into functional, visually appealing digital experiences
+          and continuously strive to improve my skills in front-end and back-end
+          technologies.
+        </p>
+        <div class="btn-sci">
+          <a
+            href="/Ed-Bariso-Resume.pdf"
+            class="btn"
+            download="Ed-Bariso-Resume.pdf"
+            id="download"
+            >Download CV</a
+          >
+          <div class="sci">
+            <a href="https://github.com/Dominic232323" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/ed-dominic-bariso-20207327a/"
+              target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="https://www.facebook.com/dmncxx.bariso" target="_blank"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/__dmncxx/" target="_blank"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </div>
         </div>
-
-        <section class="Home active">
-                <div class="home-detail">
-                        <h1>Ed Dominic Bariso</h1>
-                        <h2>I am a 
-                                <span style="--i:4;" data-text="Coder">Coder</span>
-                                <span style="--i:3;" data-text="Web Developer">Web Developer</span>
-                                <span style="--i:2;" data-text="Frontend Developer">Frontend Developer</span>
-                        </h2>
-                        <p>I am a Computer Science graduate pursuing a career in web development. I have a solid foundation in programming 
-                        and a growing passion for creating responsive, user-friendly websites and applications. I enjoy turning ideas into functional, 
-                        visually appealing digital experiences and continuously strive to improve my skills in front-end and back-end technologies.</p>
-                                <div class="btn-sci">
-                                <a href="/Ed-Bariso-Resume.pdf" class="btn" download="Ed-Bariso-Resume.pdf">Download CV</a>
-                                <div class="sci">
-                                        <a href="https://github.com/Dominic232323" target="_blank"><i class='bx bxl-github'></i></a>
-                                        <a href="https://www.linkedin.com/in/ed-dominic-bariso-20207327a/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                                        <a href="https://www.facebook.com/dmncxx.bariso" target="_blank"><i class='bx bxl-facebook'></i></a>
-                                        <a href="https://www.instagram.com/__dmncxx/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                               </div>
-                        </div>
-                </div>
-                <div class="home-img">
-                        <div class="img-box">
-                                <div class="img-item">
-                                        <img src="home.png">
-                                </div>
-                        </div>
-                </div>
-        </section>
-
-        <section class="services">
-                <h2 class="heading">My <span>Services</span></h2>
-                <div class="services-container">
-                        <div class="services-box">
-                                <div class="icon">
-                                    <i class='bx bx-code'></i>    
-                                    <a href="#"><i class='bx bx-arrow-back'></i></a>
-                                </div>
-                                <h3>Web Development</h3>
-                                <p>I create responsive and interactive websites using HTML, CSS, and JavaScript. 
-                                My focus is on building clean, well-structured layouts, styling them for all screen
-                                sizes, and adding dynamic features that enhance user experience.</p>
-                        </div>
-                         <div class="services-box">
-                                <div class="icon">
-                                   <i class='bx bxs-paint'></i>    
-                                    <a href="#"><i class='bx bx-arrow-back'></i></a>
-                                </div>
-                                <h3>UI/UX Design</h3>
-                                <p>As a beginner in UI/UX design, I focus on creating clean and simple user interfaces 
-                                while learning to improve user experience. I enjoy turning ideas into wireframes and prototypes, 
-                                and I’m continuously exploring design tools and best practices to create user-friendly 
-                                digital products.</p>
-                        </div>
-                        <div class="services-box">
-                                <div class="icon">
-                                   <i class='bx bxs-paint'></i>    
-                                    <a href="#"><i class='bx bx-arrow-back'></i></a>
-                                </div>
-                                <h3>Graphic Design</h3>
-                                <p>I'm a beginner graphic designer with a passion for creating visually appealing and effective designs. 
-                                I enjoy working on layouts, branding, and digital graphics while continuously learning design principles 
-                                and tools like Photoshop and Canva. My goal is to communicate ideas clearly and creatively through visual design</p>
-                        </div>
-                </div>
-
-        </section>
-
-        <section class="resume">
-               <div class="resume-container">
-                    <div class="resume-box">
-                        <h2>Why Hire Me?</h2>
-                        <p class="desc">I’m passionate about building clean, responsive, and user-friendly websites using
-                         HTML, CSS, and JavaScript. I focus on writing well-organized code, paying attention to detail, and
-                         ensuring every project is fast, functional, and visually appealing. Whether it’s a simple landing
-                         page or a dynamic website, I’m committed to delivering high-quality work on time and tailored to your needs.</p>
-                        <button class="resume-btn active">Experience</button>
-                        <button class="resume-btn">Education</button>
-                        <button class="resume-btn">Skills</button>
-                    </div>
-                    
-                    <div class="resume-box">
-                        <div class="resume-detail experience active">
-                             <h2 class="heading">My <span>Experience</span></h2>
-                             <p class="desc">My previous job and OJT gave me valuable hands-on experience in both technical and administrative tasks. 
-                                 I learned how to work in a team, manage my time, and apply my skills in real-world situations. It helped me grow 
-                                 professionally and gain confidence in my abilities.</p> 
-                                 <div class="resume-list">
-                                      <div class="resume-item">
-                                            <p class="year">September - November 2024</p>
-                                            <h3>Test Engineer Trainee</h3>
-                                            <p class="company">Digiplus Interactive Corporation</p>
-                                            <p class="year">April - July 2024</p>
-                                            <h3>Intern: IT & Accounting Department</h3>
-                                            <p class="company">Del Rosario & Del Rosario Law Offices</p>
-                                </div>     
-                            </div>
-                        </div>
-
-                        <div class="resume-detail education">
-                             <h2 class="heading">My <span>Education</span></h2>
-                             <p class="desc">Finished Senior High School under the Tech-Voc track, pursued a Diploma in Application Development,
-                             and later obtained a Bachelor's degree in Computer Science.</p>
-                        <div class="resume-list">
-                                <div class="resume-item">
-                                      <p class="year">2022 - 2024</p>
-                                      <h3>Bachelor of Science in Computer Science</h3>
-                                      <p class="company">University of Makati</p>
-                                </div>
-                                <div class="resume-item">
-                                      <p class="year">2018 - 2022</p>
-                                      <h3>Diploma in Application Development</h3>
-                                      <p class="company">University of Makati</p>
-                                </div>
-                                <div class="resume-item">
-                                      <p class="year">2016 - 2018</p>
-                                      <h3>Technical Vocational (SHS)</h3>
-                                      <p class="company">University of Makati</p> 
-                                </div>
-                         </div> 
-                        </div>
-
-                        <div class="resume-detail skills">
-                             <h2 class="heading">My <span>Skills</span></h2>
-                             <p class="desc">Basic knowledge of HTML, CSS, and 
-                             JavaScript able to create simple web pages and understand 
-                             core concepts.</p>
-                             <div class="resume-list">
-                                <div class="resume-item">
-                                        <i class='bx bxl-html5'></i>
-                                        <span>HTML</span>
-                                </div>
-                                <div class="resume-item">
-                                        <i class='bx bxs-file-css'></i>
-                                        <span>CSS</span>
-                                </div>
-                                <div class="resume-item">
-                                        <i class='bx bxl-javascript'></i>
-                                        <span>Javascript</span>
-                                </div>
-                             </div>
-                        </div>
-                        </div>
-                    </div>
-               </div> 
-        </section>
-
-        <section class="contact">
-              <div class="contact-container">
-                <div class="contact-box">
-                     <h2>Building The Future, Together</h2>
-                     <p class="desc">Let’s connect and build something great!</p>
-                     <div class="contact-detail">
-                        <i class='bx bxs-phone'></i>
-                        <div class="detail">
-                              <p>Phone</p>
-                              <p>09765520617</p>
-                              </div> 
-                        </div>
-                     </div>
-                     <div class="contact-detail">
-                        <i class='bx bxs-contact'></i>
-                        <div class="detail">
-                              <p>Email</p>
-                              <p>barisoeddominic@gmail.com</p> 
-                        </div>
-                </div>
+      </div>
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <img src="home.png" />
+          </div>
         </div>
-              <div class="contact-box">
-                     <form action="#">
-                        <h2 class="heading">Contact <span>Me!</span></h2>
-                        <div class="field-box">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                            <input type="text" placeholder="Phone Number" required>
-                            <textarea name="" id="" placeholder="Your message" required></textarea>   
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                     </form>   
-                </div>
-                </section>
-                </section>
-                </section>
-        </section>
-         
-                 
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script src="script.js"> </script>
+      </div>
+    </section>
 
-</body> 
+    <section class="services">
+      <h2 class="heading">My <span>Services</span></h2>
+      <div class="services-container">
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bx-code"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>Web Development</h3>
+          <p>
+            I create responsive and interactive websites using HTML, CSS, and
+            JavaScript. My focus is on building clean, well-structured layouts,
+            styling them for all screen sizes, and adding dynamic features that
+            enhance user experience.
+          </p>
+        </div>
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bxs-paint"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>
+            As a beginner in UI/UX design, I focus on creating clean and simple
+            user interfaces while learning to improve user experience. I enjoy
+            turning ideas into wireframes and prototypes, and I’m continuously
+            exploring design tools and best practices to create user-friendly
+            digital products.
+          </p>
+        </div>
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bxs-paint"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>
+            I'm a beginner graphic designer with a passion for creating visually
+            appealing and effective designs. I enjoy working on layouts,
+            branding, and digital graphics while continuously learning design
+            principles and tools like Photoshop and Canva. My goal is to
+            communicate ideas clearly and creatively through visual design
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <section class="resume">
+      <div class="resume-container">
+        <div class="resume-box">
+          <h2>Why Hire Me?</h2>
+          <p class="desc">
+            I’m passionate about building clean, responsive, and user-friendly
+            websites using HTML, CSS, and JavaScript. I focus on writing
+            well-organized code, paying attention to detail, and ensuring every
+            project is fast, functional, and visually appealing. Whether it’s a
+            simple landing page or a dynamic website, I’m committed to
+            delivering high-quality work on time and tailored to your needs.
+          </p>
+          <button class="resume-btn active">Experience</button>
+          <button class="resume-btn">Education</button>
+          <button class="resume-btn">Skills</button>
+        </div>
+        <div class="resume-box">
+          <div class="resume-detail experience active">
+            <h2 class="heading">My <span>Experience</span></h2>
+            <p class="desc">
+              My previous job and OJT gave me valuable hands-on experience in
+              both technical and administrative tasks. I learned how to work in
+              a team, manage my time, and apply my skills in real-world
+              situations. It helped me grow professionally and gain confidence
+              in my abilities.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <p class="year">September - November 2024</p>
+                <h3>Test Engineer Trainee</h3>
+                <p class="company">Digiplus Interactive Corporation</p>
+                <p class="year">April - July 2024</p>
+                <h3>Intern: IT & Accounting Department</h3>
+                <p class="company">Del Rosario & Del Rosario Law Offices</p>
+              </div>
+            </div>
+          </div>
+          <div class="resume-detail education">
+            <h2 class="heading">My <span>Education</span></h2>
+            <p class="desc">
+              Finished Senior High School under the Tech-Voc track, pursued a
+              Diploma in Application Development, and later obtained a
+              Bachelor's degree in Computer Science.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <p class="year">2022 - 2024</p>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="company">University of Makati</p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2018 - 2022</p>
+                <h3>Diploma in Application Development</h3>
+                <p class="company">University of Makati</p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2016 - 2018</p>
+                <h3>Technical Vocational (SHS)</h3>
+                <p class="company">University of Makati</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-detail skills">
+            <h2 class="heading">My <span>Skills</span></h2>
+            <p class="desc">
+              Basic knowledge of HTML, CSS, and JavaScript able to create simple
+              web pages and understand core concepts.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <i class="bx bxl-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxs-file-css"></i>
+                <span>CSS</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxl-javascript"></i>
+                <span>Javascript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-container">
+        <div class="contact-box">
+          <h2>Building The Future, Together</h2>
+          <p class="desc">Let’s connect and build something great!</p>
+          <div class="contact-detail">
+            <i class="bx bxs-phone"></i>
+            <div class="detail">
+              <p>Phone</p>
+              <p>09765520617</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bxs-contact"></i>
+            <div class="detail">
+              <p>Email</p>
+              <p>barisoeddominic@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-box">
+          <form action="#" id="form">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+            <div class="field-box">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="number"
+                name="number"
+                placeholder="Phone Number"
+                maxlength="11"
+                required
+              />
+              <textarea
+                name="message"
+                id=""
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("98clpv1knORRZqJ4T");
+      })();
+    </script>
+  </body>
 </html>
