@@ -1,2 +1,2 @@
-# Portfolio-Bariso
+# Bariso-Portfolio
 This is my portfolio.
