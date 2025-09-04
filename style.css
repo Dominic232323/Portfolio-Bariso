@@ -636,6 +636,7 @@ section.active {
     display: flex;
     flex-direction: column-reverse;
     padding-bottom: 4rem;
+    padding-top: 10rem;
   }
   .home-img .img-box {
     width: 52vw;
