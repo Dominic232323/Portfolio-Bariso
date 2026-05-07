@@ -491,7 +491,8 @@ section.active {
   transition: 0.5s;
 }
 
-.resume-detail.skills .resume-item:hover {
+.resume-detail.skills .resume-item:hover,
+.resume-detail.skills .resume-item:active {
   color: var(--main-color);
 }
 
@@ -508,8 +509,8 @@ section.active {
   transform: scale(0.9);
   transition: 0.4s;
 }
-
-.resume-detail.skills .resume-item:hover span {
+.resume-detail.skills .resume-item:hover span,
+.resume-detail.skills .resume-item:active span {
   top: -25%;
   opacity: 1;
   transform: scale(1);
