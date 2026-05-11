@@ -315,7 +315,7 @@ section.active {
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 4rem;
+  gap: 6rem;
   margin-top: 50px;
 }
 
