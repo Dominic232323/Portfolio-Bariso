@@ -53,10 +53,9 @@ header.active {
   }
 }
 
-.logo {
-  font-size: 3rem;
-  color: var(--white-color);
-  font-weight: 700;
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 nav a {
