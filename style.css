@@ -312,6 +312,10 @@ section.active {
   color: var(--main-color);
 }
 
+.services {
+  padding-top: 12rem;
+}
+
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
