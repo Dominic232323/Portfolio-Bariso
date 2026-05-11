@@ -387,6 +387,10 @@ section.active {
   font-size: 1.6rem;
 }
 
+.resume {
+   padding-top: 20rem;
+}
+  
 .resume-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -519,6 +523,10 @@ section.active {
   top: -25%;
   opacity: 1;
   transform: scale(1);
+}
+
+.contact {
+   padding-top: 20rem;
 }
 
 .contact-container {
