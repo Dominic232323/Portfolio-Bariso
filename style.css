@@ -43,7 +43,7 @@ header {
 }
 
 header.active {
-  animation: show-header 1.5 linear forwards;
+  animation: show-header 1.5s linear forwards;
   animation-delay: 1.1s;
 }
 
@@ -117,15 +117,15 @@ nav a:hover {
 
 section {
   position: absolute;
-  top: 0;        
-  left: 0;       
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 10rem 9% 2rem;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
-  pointer-events: none;  
+  pointer-events: none;
 }
 
 section.active {
@@ -148,8 +148,7 @@ section.active {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 100vh; 
-  height: 100vh;     
+  height: 100vh;
 }
 
 #bg-video {
@@ -281,7 +280,6 @@ section.active {
   overflow: hidden;
 }
 
-/* ROTATING CIRCLE */
 .home-img .img-box::before,
 .home-img .img-box::after {
   content: "";
@@ -416,9 +414,9 @@ section.active {
 }
 
 .resume {
-   padding-top: 15rem;
+  padding-top: 15rem;
 }
-  
+
 .resume-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -546,6 +544,7 @@ section.active {
   transform: scale(0.9);
   transition: 0.4s;
 }
+
 .resume-detail.skills .resume-item:hover span,
 .resume-detail.skills .resume-item:active span {
   top: -25%;
@@ -554,7 +553,7 @@ section.active {
 }
 
 .contact {
-   padding-top: 20rem;
+  padding-top: 20rem;
 }
 
 .contact-container {
@@ -648,21 +647,39 @@ section.active {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  section {
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
-    position: relative;
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 55%;
   }
 
-  section.active {
-    overflow: auto;
+  .home-img .img-box {
+    width: 30vw;
+    height: 30vw;
   }
+
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
 
   #menu-icon {
     display: block;
+    cursor: pointer;
+    pointer-events: all;
   }
+
   nav {
     position: absolute;
     top: 100%;
@@ -676,63 +693,129 @@ section.active {
     display: none;
     z-index: 9999;
   }
+
   nav.active {
     display: block;
   }
+
   nav a {
     display: block;
-    margin: 4rem;
+    margin: 3rem auto;
   }
+
+
+  section {
+    padding: 10rem 5% 4rem;
+  }
+
+  @keyframes show-content {
+    100% {
+      visibility: visible;
+      opacity: 1;
+      overflow-y: auto;
+    }
+  }
+
+  /* Home */
   .Home {
     height: auto;
     min-height: 100vh;
-    overflow: auto;
+    align-items: flex-start;
+    padding-top: 2rem;
   }
+
   .home-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    gap: 3rem;
     padding: 2rem 0;
-    gap: 2rem;
   }
+
   .home-img .img-box {
-    width: 52vw;
-    height: 52vw;
+    width: 55vw;
+    height: 55vw;
   }
+
+  .home-detail {
+    text-align: center;
+    width: 100%;
+  }
+
   .home-detail h1 {
-    font-size: 3.5rem;
+    font-size: 3.6rem;
   }
+
   .home-detail h2 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
+
   .home-detail p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
+
   .home-detail .btn-sci {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 2rem;
   }
+
   .home-detail .btn-sci .sci {
     margin-left: 0;
     display: flex;
     flex-direction: row;
+    gap: 0.5rem;
   }
-  #download {
-    text-align: center;
+
+  
+  .services {
+    padding-top: 12rem;
   }
-  .resume .resume-container {
-    display: flex;
-    flex-direction: column;
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
+
+  
+  .resume {
+    padding-top: 12rem;
+  }
+
+  .resume-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .resume-list {
+    height: auto;
+    overflow: visible;
+  }
+
   .resume-list .resume-item {
-    height: calc((60rem - 2rem) / 2);
+    height: auto;
+    padding: 2rem;
   }
+
+  
+  .contact {
+    padding-top: 12rem;
+  }
+
   .contact-container {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
+
   .contact-box .field-box {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box .field-box textarea {
+    grid-column: 1;
+    height: 18rem;
+  }
+
+  .heading {
+    font-size: 3.5rem;
   }
 }
