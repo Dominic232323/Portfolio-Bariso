@@ -649,6 +649,17 @@ section.active {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  section.active {
+    overflow: auto;
+  }
+
   #menu-icon {
     display: block;
   }
@@ -672,67 +683,54 @@ section.active {
     display: block;
     margin: 4rem;
   }
-
   .Home {
     height: auto;
     min-height: 100vh;
     overflow: auto;
   }
-
   .home-wrapper {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
     gap: 2rem;
   }
-
   .home-img .img-box {
     width: 52vw;
     height: 52vw;
   }
-
   .home-detail h1 {
     font-size: 3.5rem;
   }
-
   .home-detail h2 {
     font-size: 2.4rem;
   }
-
   .home-detail p {
     font-size: 1.4rem;
   }
-
   .home-detail .btn-sci {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
   }
-
   .home-detail .btn-sci .sci {
     margin-left: 0;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
   }
-
   #download {
     text-align: center;
   }
-
   .resume .resume-container {
     display: flex;
     flex-direction: column;
   }
-
   .resume-list .resume-item {
     height: calc((60rem - 2rem) / 2);
   }
-
   .contact-container {
     display: flex;
     flex-direction: column;
   }
-
   .contact-box .field-box {
     display: flex;
     flex-direction: column;
