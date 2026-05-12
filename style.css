@@ -668,6 +668,9 @@ section.active {
     padding: 2rem 0;
     gap: 2rem;
   }
+  .home-img {
+    order: -1;
+  }
   .home-img .img-box {
     width: 52vw;
     height: 52vw;
