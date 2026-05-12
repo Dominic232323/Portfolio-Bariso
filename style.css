@@ -75,6 +75,7 @@ nav a:hover {
 #menu-icon {
   font-size: 4rem;
   display: none;
+  cursor: pointer;
 }
 
 .bars-box {
@@ -82,6 +83,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   display: flex;
+  pointer-events: none;
 }
 
 .bars-box .bar {
@@ -93,12 +95,8 @@ nav a:hover {
 }
 
 @keyframes hide-bars {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
 }
 
 .bars-box.active .bar {
@@ -107,12 +105,8 @@ nav a:hover {
 }
 
 @keyframes show-bars {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
 }
 
 section {
@@ -131,6 +125,7 @@ section {
 section.active {
   animation: show-content 1.5s linear forwards;
   animation-delay: 1.5s;
+  pointer-events: all;
 }
 
 @keyframes show-content {
@@ -190,10 +185,7 @@ section.active {
 }
 
 @keyframes display-text {
-  25%,
-  100% {
-    display: none;
-  }
+  25%, 100% { display: none; }
 }
 
 .home-detail h2 span::before {
@@ -208,14 +200,8 @@ section.active {
 }
 
 @keyframes fill-text {
-  10%,
-  100% {
-    width: 0;
-  }
-  70%,
-  90% {
-    width: 100%;
-  }
+  10%, 100% { width: 0; }
+  70%, 90% { width: 100%; }
 }
 
 .home-detail p {
@@ -239,6 +225,7 @@ section.active {
   color: var(--bg-color);
   font-weight: 500;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -286,12 +273,7 @@ section.active {
   position: absolute;
   width: 60rem;
   height: 60rem;
-  background: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    var(--main-color)
-  );
+  background: conic-gradient(transparent, transparent, transparent, var(--main-color));
   transform: rotate(0deg);
   animation: rotate-border 10s linear infinite;
 }
@@ -301,9 +283,7 @@ section.active {
 }
 
 @keyframes rotate-border {
-  100% {
-    transform: rotate(360deg);
-  }
+  100% { transform: rotate(360deg); }
 }
 
 .home-img .img-box .img-item {
@@ -446,6 +426,12 @@ section.active {
   margin-bottom: 2rem;
   border-radius: 0.8rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-box .resume-btn:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
 }
 
 .resume-box .resume-btn.active {
