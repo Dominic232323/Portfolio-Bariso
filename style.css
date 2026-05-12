@@ -157,6 +157,15 @@ section.active {
   z-index: 0;
 }
 
+.home-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+}
+
 .home-detail h1 {
   font-size: clamp(3.5rem, 10vw, 5.5rem);
 }
