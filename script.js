@@ -13,9 +13,7 @@ const activePage = () => {
   const header = document.querySelector("header");
   const barsBox = document.querySelector(".bars-box");
 
-  
   header.classList.remove("active");
-  void header.offsetWidth;
   setTimeout(() => {
     header.classList.add("active");
   }, 1100);
@@ -24,15 +22,19 @@ const activePage = () => {
     link.classList.remove("active");
   });
 
+  // Force bars animation restart
   barsBox.classList.remove("active");
-  void barsBox.offsetWidth;
+  barsBox.querySelectorAll(".bar").forEach((bar) => {
+    bar.style.animation = "none";
+    bar.offsetHeight; // trigger reflow
+    bar.style.animation = "";
+  });
   setTimeout(() => {
     barsBox.classList.add("active");
   }, 1100);
 
   sections.forEach((section) => {
     section.classList.remove("active");
-    void section.offsetWidth; 
   });
 
   menuIcon.classList.remove("bx-x");
