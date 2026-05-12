@@ -3,37 +3,47 @@ const logoLink = document.querySelector(".logo");
 const sections = document.querySelectorAll("section");
 const menuIcon = document.querySelector("#menu-icon");
 const navBar = document.querySelector("header nav");
+
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
   navBar.classList.toggle("active");
 });
+
 const activePage = () => {
   const header = document.querySelector("header");
   const barsBox = document.querySelector(".bars-box");
+  const bars = barsBox.querySelectorAll(".bar");
 
   header.classList.remove("active");
   setTimeout(() => {
     header.classList.add("active");
   }, 1100);
 
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-  });
-
-  // Trigger show-bars animation
-  barsBox.classList.add("active");
-
-  // After bars cover screen, hide them again
-  setTimeout(() => {
-    barsBox.classList.remove("active");
-  }, 1100);
-
-  sections.forEach((section) => {
-    section.classList.remove("active");
-  });
-
+  navLinks.forEach((link) => link.classList.remove("active"));
+  sections.forEach((section) => section.classList.remove("active"));
   menuIcon.classList.remove("bx-x");
   navBar.classList.remove("active");
+
+  
+  bars.forEach((bar) => {
+    bar.style.animation = "none";
+    bar.offsetHeight; // trigger reflow
+    bar.style.animation = "";
+  });
+
+  barsBox.classList.remove("active");
+
+ 
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      barsBox.classList.add("active");
+    });
+  });
+
+ 
+  setTimeout(() => {
+    barsBox.classList.remove("active");
+  }, 1000);
 };
 navLinks.forEach((link, idx) => {
   link.addEventListener("click", () => {
