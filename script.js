@@ -13,7 +13,9 @@ const activePage = () => {
   const header = document.querySelector("header");
   const barsBox = document.querySelector(".bars-box");
 
+  
   header.classList.remove("active");
+  void header.offsetWidth;
   setTimeout(() => {
     header.classList.add("active");
   }, 1100);
@@ -23,12 +25,14 @@ const activePage = () => {
   });
 
   barsBox.classList.remove("active");
+  void barsBox.offsetWidth;
   setTimeout(() => {
     barsBox.classList.add("active");
   }, 1100);
 
-  sections.forEach((sections) => {
-    sections.classList.remove("active");
+  sections.forEach((section) => {
+    section.classList.remove("active");
+    void section.offsetWidth; 
   });
 
   menuIcon.classList.remove("bx-x");
@@ -39,9 +43,7 @@ navLinks.forEach((link, idx) => {
   link.addEventListener("click", () => {
     if (!link.classList.contains("active")) {
       activePage();
-
       link.classList.add("active");
-
       setTimeout(() => {
         sections[idx].classList.add("active");
       }, 1100);
@@ -52,9 +54,7 @@ navLinks.forEach((link, idx) => {
 logoLink.addEventListener("click", () => {
   if (!navLinks[0].classList.contains("active")) {
     activePage();
-
     navLinks[0].classList.add("active");
-
     setTimeout(() => {
       sections[0].classList.add("active");
     }, 1100);
@@ -62,16 +62,13 @@ logoLink.addEventListener("click", () => {
 });
 
 const resumeBtns = document.querySelectorAll(".resume-btn");
-
 resumeBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
     const resumeDetails = document.querySelectorAll(".resume-detail");
-
     resumeBtns.forEach((btn) => {
       btn.classList.remove("active");
     });
     btn.classList.add("active");
-
     resumeDetails.forEach((detail) => {
       detail.classList.remove("active");
     });
@@ -79,12 +76,10 @@ resumeBtns.forEach((btn, idx) => {
   });
 });
 
-//For Email Sending
+// For Email Sending
 const form = document.querySelector("form");
-
 const sendEmail = (e) => {
   e.preventDefault();
-
   emailjs
     .sendForm("service_56gimfl", "template_piu3p7i", "#form")
     .then((response) => {
@@ -97,5 +92,4 @@ const sendEmail = (e) => {
       alert("Failed to send message. Please try again.");
     });
 };
-
 document.getElementById("form").addEventListener("submit", sendEmail);
