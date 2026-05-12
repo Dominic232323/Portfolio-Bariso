@@ -679,7 +679,15 @@ section.active {
     flex-direction: column-reverse;
     padding-bottom: 4rem;
     padding-top: 10rem;
+    height: 100vh;        
+    overflow: hidden;     
   }
+
+  .home-wrapper {
+    flex-direction: column-reverse;  
+    padding: 2rem;                   
+  }
+
   .home-img .img-box {
     width: 52vw;
     height: 52vw;
