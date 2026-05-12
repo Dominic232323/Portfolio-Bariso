@@ -668,30 +668,53 @@ section.active {
   nav.active {
     display: block;
   }
-
   nav a {
     display: block;
     margin: 4rem;
   }
 
   .Home {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-bottom: 4rem;
-    padding-top: 10rem;
-    height: 100vh;        
-    overflow: hidden;     
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
   }
 
   .home-wrapper {
-    flex-direction: column-reverse;  
-    padding: 2rem;                   
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
   }
 
   .home-img .img-box {
     width: 52vw;
     height: 52vw;
   }
+
+  .home-detail h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-detail h2 {
+    font-size: 2.4rem;
+  }
+
+  .home-detail p {
+    font-size: 1.4rem;
+  }
+
+  .home-detail .btn-sci {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .home-detail .btn-sci .sci {
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;  
+  }
+
   #download {
     text-align: center;
   }
