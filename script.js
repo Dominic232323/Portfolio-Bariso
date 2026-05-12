@@ -12,6 +12,7 @@ menuIcon.addEventListener("click", () => {
 const activePage = () => {
   const header = document.querySelector("header");
   const barsBox = document.querySelector(".bars-box");
+  const bars = document.querySelectorAll(".bars-box .bar");
 
   header.classList.remove("active");
   setTimeout(() => {
@@ -22,13 +23,16 @@ const activePage = () => {
     link.classList.remove("active");
   });
 
-  // Force bars animation restart
+  // Remove active first
   barsBox.classList.remove("active");
-  barsBox.querySelectorAll(".bar").forEach((bar) => {
-    bar.style.animation = "none";
-    bar.offsetHeight; // trigger reflow
-    bar.style.animation = "";
+
+  // Force each bar to reset by replacing the node
+  bars.forEach((bar) => {
+    const clone = bar.cloneNode(true);
+    bar.parentNode.replaceChild(clone, bar);
   });
+
+  // Now add active to trigger show-bars on fresh elements
   setTimeout(() => {
     barsBox.classList.add("active");
   }, 1100);
@@ -67,19 +71,14 @@ const resumeBtns = document.querySelectorAll(".resume-btn");
 resumeBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
     const resumeDetails = document.querySelectorAll(".resume-detail");
-    resumeBtns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
+    resumeBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    resumeDetails.forEach((detail) => {
-      detail.classList.remove("active");
-    });
+    resumeDetails.forEach((detail) => detail.classList.remove("active"));
     resumeDetails[idx].classList.add("active");
   });
 });
 
 // For Email Sending
-const form = document.querySelector("form");
 const sendEmail = (e) => {
   e.preventDefault();
   emailjs
