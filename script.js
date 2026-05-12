@@ -3,16 +3,13 @@ const logoLink = document.querySelector(".logo");
 const sections = document.querySelectorAll("section");
 const menuIcon = document.querySelector("#menu-icon");
 const navBar = document.querySelector("header nav");
-
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
   navBar.classList.toggle("active");
 });
-
 const activePage = () => {
   const header = document.querySelector("header");
   const barsBox = document.querySelector(".bars-box");
-  const bars = document.querySelectorAll(".bars-box .bar");
 
   header.classList.remove("active");
   setTimeout(() => {
@@ -23,18 +20,12 @@ const activePage = () => {
     link.classList.remove("active");
   });
 
-  // Remove active first
-  barsBox.classList.remove("active");
+  // Trigger show-bars animation
+  barsBox.classList.add("active");
 
-  // Force each bar to reset by replacing the node
-  bars.forEach((bar) => {
-    const clone = bar.cloneNode(true);
-    bar.parentNode.replaceChild(clone, bar);
-  });
-
-  // Now add active to trigger show-bars on fresh elements
+  // After bars cover screen, hide them again
   setTimeout(() => {
-    barsBox.classList.add("active");
+    barsBox.classList.remove("active");
   }, 1100);
 
   sections.forEach((section) => {
@@ -44,7 +35,6 @@ const activePage = () => {
   menuIcon.classList.remove("bx-x");
   navBar.classList.remove("active");
 };
-
 navLinks.forEach((link, idx) => {
   link.addEventListener("click", () => {
     if (!link.classList.contains("active")) {
@@ -56,7 +46,6 @@ navLinks.forEach((link, idx) => {
     }
   });
 });
-
 logoLink.addEventListener("click", () => {
   if (!navLinks[0].classList.contains("active")) {
     activePage();
@@ -66,7 +55,6 @@ logoLink.addEventListener("click", () => {
     }, 1100);
   }
 });
-
 const resumeBtns = document.querySelectorAll(".resume-btn");
 resumeBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
@@ -77,7 +65,6 @@ resumeBtns.forEach((btn, idx) => {
     resumeDetails[idx].classList.add("active");
   });
 });
-
 // For Email Sending
 const sendEmail = (e) => {
   e.preventDefault();
